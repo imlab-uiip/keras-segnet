@@ -125,4 +125,4 @@ autoencoder.add(Permute((2, 1)))
 autoencoder.add(Activation('softmax'))
 
 with open('model_5l.json', 'w') as outfile:
-    json.dump(autoencoder.to_json(), outfile)
+    outfile.write(json.dumps(json.loads(autoencoder.to_json()), indent=2))

@@ -102,7 +102,7 @@ def plot_results(output):
 #########################################################################################################
 
 with open('model_5l.json') as model_file:
-    autoencoder = models.model_from_json(json.load(model_file))
+    autoencoder = models.model_from_json(model_file.read())
 
 optimizer = SGD(lr=0.001, momentum=0.9, decay=0.0005, nesterov=False)
 autoencoder.compile(loss="categorical_crossentropy", optimizer=optimizer, metrics=['accuracy'])
