@@ -1,0 +1,7 @@
+Image,GroundTruth
+train/JPCLN001.jpg,train/JPCLN001.jpg-msk.png
+train/JPCLN002.jpg,train/JPCLN002.jpg-msk.png
+train/JPCLN003.jpg,train/JPCLN003.jpg-msk.png
+train/JPCLN004.jpg,train/JPCLN004.jpg-msk.png
+train/JPCLN005.jpg,train/JPCLN005.jpg-msk.png
+train/JPCLN006.jpg,train/JPCLN006.jpg-msk.png
