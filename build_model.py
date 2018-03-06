@@ -11,10 +11,10 @@ n_labels = 2
 kernel = 3
 
 encoding_layers = [
-    Convolution2D(64, kernel, kernel, border_mode='same', input_shape=(1, img_h, img_w)),
+    Convolution2D(64, kernel, border_mode='same', input_shape=( img_h, img_w,1)),
     BatchNormalization(),
     Activation('relu'),
-    Convolution2D(64, kernel, kernel, border_mode='same'),
+    Convolution2D(64, kernel, border_mode='same'),
     BatchNormalization(),
     Activation('relu'),
     MaxPooling2D(),
@@ -66,6 +66,7 @@ autoencoder.encoding_layers = encoding_layers
 
 for l in autoencoder.encoding_layers:
     autoencoder.add(l)
+    print(l.input_shape,l.output_shape,l)
 
 decoding_layers = [
     UpSampling2D(),
